@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Viora</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+<body>
+    <main>
+        <div class="logo-name">Viora</div>
+        <div class="login-section">
+            <div class="login-head">Register</div>
+            <div class="err-msg" id="err-msg"></div>
+            <form name="register-form" id="register-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Your Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="register-link">
+                Have an account? <a href="/login.html">Login Here</a>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="styles/movieDetails.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-name">Viora</div>
+        <ul class="nav-list">
+            <li><a href="dashboard.html">HOME</a></li>
+            <li><a href="#">MOVIES</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <main class="movie-detail-container">
+        <div class="poster-section">
+            <img id="poster" src="" alt="Movie Poster">
+        </div>
+
+        <div class="details-section">
+            <h1 id="title">Movie Title</h1>
+            <p class="meta"><span id="year"></span> | <span id="rated"></span> | <span id="runtime"></span></p>
+            <p class="sub-meta"><strong>Released:</strong> <span id="released"></span></p>
+            <p class="sub-meta"><strong>Genre:</strong> <span id="genre"></span></p>
+            <p class="sub-meta"><strong>Director:</strong> <span id="director"></span></p>
+            <p class="sub-meta"><strong>Writer:</strong> <span id="writer"></span></p>
+            <p class="sub-meta"><strong>Actors:</strong> <span id="actors"></span></p>
+            <p class="sub-meta"><strong>Language:</strong> <span id="language"></span></p>
+            <p class="sub-meta"><strong>Country:</strong> <span id="country"></span></p>
+            <p class="sub-meta"><strong>Awards:</strong> <span id="awards"></span></p>
+            <p class="sub-meta"><strong>Box Office:</strong> <span id="box_office"></span></p>
+
+            <p class="plot" id="plot"></p>
+
+            <div class="ratings">
+                <div class="rating-badge">
+                    IMDb: <span id="imdb_rating"></span>/10 (<span id="imdb_votes"></span> votes)
+                </div>
+            </div>
+
+            <div class="user-inputs">
+                <label for="status">My Status:</label>
+                <select id="status">
+                    <option value="planned">Planned</option>
+                    <option value="watching">Watching</option>
+                    <option value="completed">Completed</option>
+                    <option value="dropped">Dropped</option>
+                </select>
+
+                <label for="personal-rating">My Rating:</label>
+                <input type="number" id="personal-rating" min="1" max="10" placeholder="Rate 1-10">
+            </div>
+
+            <button class="save-btn" id="save-btn">Save</button>
+        </div>
+    </main>
+
+    <script>
+        // Example of populating with data (replace with your actual JS logic)
+        const movieData = {
+            id: "1",
+            title: "Inception",
+            year: "2010",
+            rated: "PG-13",
+            released: "16 Jul 2010",
+            runtime: "148 min",
+            genre: "Action, Adventure, Sci-Fi",
+            director: "Christopher Nolan",
+            writer: "Christopher Nolan",
+            actors: "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+            plot: "A thief who steals corporate secrets through dream-sharing technology is tasked with planting an idea into the mind of a CEO.",
+            language: "English, Japanese, French",
+            country: "USA, UK",
+            awards: "Won 4 Oscars. 157 wins & 220 nominations total",
+            poster: "https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg",
+            imdb_rating: "8.8",
+            imdb_votes: "2,300,000",
+            box_office: "$829,895,144"
+        };
+
+        document.getElementById("poster").src = movieData.poster;
+        document.getElementById("title").innerText = movieData.title;
+        document.getElementById("year").innerText = movieData.year;
+        document.getElementById("rated").innerText = movieData.rated;
+        document.getElementById("runtime").innerText = movieData.runtime;
+        document.getElementById("released").innerText = movieData.released;
+        document.getElementById("genre").innerText = movieData.genre;
+        document.getElementById("director").innerText = movieData.director;
+        document.getElementById("writer").innerText = movieData.writer;
+        document.getElementById("actors").innerText = movieData.actors;
+        document.getElementById("language").innerText = movieData.language;
+        document.getElementById("country").innerText = movieData.country;
+        document.getElementById("awards").innerText = movieData.awards;
+        document.getElementById("box_office").innerText = movieData.box_office;
+        document.getElementById("plot").innerText = movieData.plot;
+        document.getElementById("imdb_rating").innerText = movieData.imdb_rating;
+        document.getElementById("imdb_votes").innerText = movieData.imdb_votes;
+    </script>
+    <script src="scripts/movieDetails.js"></script>
+</body>
+</html>

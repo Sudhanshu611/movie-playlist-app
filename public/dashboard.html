@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Movie Database</title>
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-name">Viora</div>
+        <ul class="nav-list">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MOVIES</a></li>
+            <li><a href="#">ABOUT</a></li>
+        </ul>
+        <div class="account">
+            <div class="account-logo"><img src="images/user.png" alt="" width="30", height="30"></div>
+            <div class="account-content">
+                <a href="#">Profile</a>
+                <a href="#">My Watchlist</a>
+                <a href="#">Settings</a>
+                <a href="#">Help/Support</a>
+                <a class="logout" id="logout">Logout</a>
+                <a class="delete-user" id="delete-user">Delete User</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1 class="hero-title">Find Your Next Favorite Movie</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search movies..." autocomplete="off">
+            <ul id="suggestions" class="suggestions-list">
+            </ul>
+        </div>
+    </section>
+    <section class="movie-search-filter">
+        <div class="search-filters">
+            <input type="text" id="movie-search" placeholder="Search by title, actor, or director">
+            <select id="genre-filter">
+                <option value="">All Genres</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Crime">Crime</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+            <select id="year-filter">
+                <option value="">All Years</option>
+                <option value="2020s">2020s</option>
+                <option value="2010s">2010s</option>
+                <option value="2000s">2000s</option>
+                <option value="1990s">1990s</option>
+                <option value="1980s">1980s</option>
+            </select>
+            <select id="rating-filter">
+                <option value="">Any Rating</option>
+                <option value="9">9+</option>
+                <option value="8">8+</option>
+                <option value="7">7+</option>
+                <option value="6">6+</option>
+            </select>
+            <select id="language-filter">
+                <option value="">Any Language</option>
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Japanese">Japanese</option>
+            </select>
+        </div>
+        <div class="movie-list" id="movie-list"></div>
+    </section>
+    
+    <script  type="module" src="scripts/dashboard/auth.js"></script>
+    <script  type="module" src="scripts/dashboard/movie.js"></script>
+</body>
+</html>

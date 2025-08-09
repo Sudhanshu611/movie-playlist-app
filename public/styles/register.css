@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap');
+
+
+:root{
+    --inter : 'Inter', sans-serif;
+    --playfair-display : 'Playfair Display', serif;
+}
+
+body{
+    font-family: var(--playfair-display);
+    margin: 0;
+    padding: 0;
+    color: #000000cc;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.logo-name{
+    font-weight: 600;
+    font-size: 4rem;
+    margin: 20px 40px;
+}
+.login-section{
+    width: 300px;
+    margin: 20px auto;
+    padding: 30px 50px;
+    /* background-color: aqua; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+.login-head{
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-size: 1rem;
+    font-weight: 500;
+}
+form input{
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    font-family: var(--playfair-display);
+}
+form button{
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: white;
+    padding: 9px 7px;
+    width: 50%;
+    font-family: var(--playfair-display);
+    font-size: 1rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    transition: 200ms ease-in-out;
+    
+}
+form button:hover{
+    background-color: #000000cc;
+    color: whitesmoke;
+}
+.register-link{
+    width: 100%;
+}
+a{
+    outline: none;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.err-msg{
+    text-align: center;
+    color: rgb(220, 20, 60);
+    background-color: rgb(220, 20, 60, 0.1);
+    width: fit-content;
+    margin: 5px auto;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    display: none;
+}
