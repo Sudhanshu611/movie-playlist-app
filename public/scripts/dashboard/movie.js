@@ -193,7 +193,7 @@ searchInput.addEventListener('input', async () => {
     } else {
       suggestionsList.style.display = 'none';
     }
-  }, 100);
+  }, 200);
 });
 
 document.addEventListener('click', (e) => {

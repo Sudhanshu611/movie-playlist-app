@@ -23,7 +23,6 @@ async function loadContent(retry = true){
         window.location.href = '/login.html';
         return;
     }
-
   return res.json();
 }
 loadContent();

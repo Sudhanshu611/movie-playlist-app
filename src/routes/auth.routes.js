@@ -15,7 +15,6 @@ router.post('/logout', logout);
 router.delete('/delete',verifyToken ,removeUser);
 router.get('/protected', verifyToken, (req, res) => {
     res.status(200).json({ msg: 'Access granted', user: req.user });
-    // res.sendFile(join(__dirname, '../../public/dashboard.html'));
 });
 
 

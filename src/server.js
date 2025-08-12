@@ -16,7 +16,6 @@ const __dirname = fileURLToPath(dirname(import.meta.url));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(join(__dirname, '../public')));
-
 // Router
 app.use('/auth', authRouter);
 app.use('/movie', movieRouter)
