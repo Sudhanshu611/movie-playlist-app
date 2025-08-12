@@ -9,7 +9,7 @@ const errMsg = document.getElementById('err-msg');
 async function loginUser(){
 
 
-    const res = await fetch('/auth/login', {
+    const res = await fetch('https://viora-backend.onrender.com/auth/login', {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify({

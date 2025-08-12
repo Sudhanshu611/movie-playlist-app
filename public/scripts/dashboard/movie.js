@@ -2,7 +2,7 @@ const movieCardsHTML = document.getElementById('movie-list');
 async function renderHTML(){
   try{
     const accessToken = localStorage.getItem('accessToken');
-    const res = await fetch('/movie/userMovies',{
+    const res = await fetch('https://viora-backend.onrender.com/movie/userMovies',{
       headers : {'Content-Type' : 'application/json',
         'authorization' : 'Bearer ' + accessToken
       }
@@ -79,7 +79,7 @@ renderHTML();
 async function deleteMovie(id){
     const accessToken = localStorage.getItem('accessToken');
     try{
-    const res = await fetch('/movie/delete/' + id, {
+    const res = await fetch('https://viora-backend.onrender.com/movie/delete/' + id, {
         method : 'DELETE',
         headers : {
             'authorization' : 'Bearer ' + accessToken,
@@ -131,7 +131,7 @@ async function movieBySearch(input){
 
     const movieData = await movie.json();
     console.log(movieData)
-    const res = await fetch('/movie/insert',{
+    const res = await fetch('https://viora-backend.onrender.com/movie/insert',{
       method : 'POST',
       headers : {
         'Content-Type' : 'application/json',
@@ -193,7 +193,7 @@ searchInput.addEventListener('input', async () => {
     } else {
       suggestionsList.style.display = 'none';
     }
-  }, 200);
+  }, 250);
 });
 
 document.addEventListener('click', (e) => {

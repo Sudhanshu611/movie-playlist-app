@@ -12,11 +12,11 @@
 async function loadContent(retry = true){
   const accessToken = localStorage.getItem('accessToken');
   
-  const res  = await fetch('/auth/protected', {
+  const res  = await fetch('https://viora-backend.onrender.com/auth/protected', {
     headers : {'authorization' : 'Bearer ' + accessToken}
   })
   if (!res.ok && retry){
-    const refreshRes = await fetch('/auth/refresh', {
+    const refreshRes = await fetch('https://viora-backend.onrender.com/auth/refresh', {
         'method' : 'GET',
         'credentials' : 'include'
       })
@@ -52,7 +52,7 @@ async function getMovieInfo(){
     const accessToken = localStorage.getItem('accessToken');
     if (!accessToken) return alert('Token not found.');
 
-    const res = await fetch('/movie/details/' + movieId, {
+    const res = await fetch('https://viora-backend.onrender.com/movie/details/' + movieId, {
         headers : {
             'Content-Type' : 'application/json',
             'authorization' : 'Bearer ' + accessToken
@@ -101,7 +101,7 @@ document.getElementById('save-btn').addEventListener('click', async (e) => {
     const status = document.getElementById('status');
     const personalRating = document.getElementById('personal-rating');
 
-    const res = await fetch('/movie/update/'+movieId, {
+    const res = await fetch('https://viora-backend.onrender.com/movie/update/'+movieId, {
         method : 'PUT',
         headers : {
             'Content-Type' : 'application/json',

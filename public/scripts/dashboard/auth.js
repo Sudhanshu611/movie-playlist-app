@@ -1,11 +1,11 @@
 async function loadContent(retry = true){
   const accessToken = localStorage.getItem('accessToken');
   
-  const res  = await fetch('/auth/protected', {
+  const res  = await fetch('https://viora-backend.onrender.com/auth/protected', {
     headers : {'authorization' : 'Bearer ' + accessToken}
   })
   if (!res.ok && retry){
-    const refreshRes = await fetch('/auth/refresh', {
+    const refreshRes = await fetch('https://viora-backend.onrender.com/auth/refresh', {
         'method' : 'GET',
         'credentials' : 'include'
       })
@@ -28,7 +28,7 @@ async function loadContent(retry = true){
 loadContent();
 
 async function logout(){
-  const res = await fetch('/auth/logout', {
+  const res = await fetch('https://viora-backend.onrender.com/auth/logout', {
     method : 'POST',
     credentials : 'include'
   })
@@ -50,7 +50,7 @@ const deleteUser = async () => {
   const accessToken = localStorage.getItem('accessToken');
   if (!accessToken) return;
   
-  const res = await fetch('/auth/delete', {
+  const res = await fetch('https://viora-backend.onrender.com/auth/delete', {
     method : 'DELETE',
     headers : {
       'Content-Type' : 'application/json',

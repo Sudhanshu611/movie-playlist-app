@@ -7,7 +7,7 @@ const errMsg = document.getElementById('err-msg');
 
 
 async function registerUser(){
-    const res = await fetch('/auth/register', {
+    const res = await fetch('https://viora-backend.onrender.com/auth/register', {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify({
